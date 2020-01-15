@@ -1,10 +1,30 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
+
 let userChoice = prompt("How many characters would you like your random password to be? Please enter a number between 8 and 128.");
+//tried doing an or here but could not get it to work
+  if (userChoice < 8 || userChoice > 128) {
+    alert("Hey! Follow the directions dummy!");
+    
+  }
+  
+  /*
+  if (userChoice = "") {
+    alert("Hey! Follow the directions dummy!");
+    
+  }
+*/
+
 let specialCharacters = confirm("Would you like your password to include special characters?");
 let numeric = confirm("Would you like your password to include numbers?");
 let lowerCase = confirm("Would you like your password to include lower case letters?");
 let upperCase = confirm("Would you like you password to include upper case letters?");
+
+
+
+
+
+
 
 // Write password to the #password input
 function writePassword() {

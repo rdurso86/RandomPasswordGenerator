@@ -23,50 +23,47 @@ let lowerCaseChoice = (confirm("Would you like your password to include lower ca
 let upperCaseChoice = (confirm("Would you like you password to include upper case letters?"));
 let symbolsChoice = (confirm("Would you like your password to include special characters?"));
 
-let charArr = [];
-let lowerCase = "abcdefghijklmnopqrstuvwxyz";
-let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let symbols = "~!@#$%^&*()_+=?";
-let numbers = "0123456789";
 
 
 function randomNumber(){
+  let numbers = "0123456789";
   if (numberChoice === true) {
-    charArr.push(numbers);
-  }
-return;
-}
+  return numbers;
+}}
 
 function randomLower(){
+  let lowerCase = "abcdefghijklmnopqrstuvwxyz";
   if (lowerCaseChoice === true) {
-  charArr.push(lowerCase);
+  return lowerCase;
 }}
 
 function randomUpper(){
+  let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   if (upperCaseChoice === true) {
-  charArr.push(upperCase);
+  return upperCase;
 }}
 
 function randomSymbol(){
+  let symbols = "~!@#$%^&*()_+=?";
   if (symbolsChoice === true) {
-  charArr.push(symbols);
+  return symbols;
 }}
 
 
-/*console.log(randomLower());
+console.log(randomLower());
 console.log(randomUpper());
 console.log(randomNumber());
 console.log(randomSymbol());
-*/
+
 // Write password to the #password input
  
 //charArr = [randomLower, randomUpper, randomNumber, randomSymbol];
+charArr = [];
 
-
-//charArr.push(randomLower());
-//charArr.push(randomUpper());
-//charArr.push(randomNumber());
-//charArr.push(randomSymbol());
+charArr.push(randomLower());
+charArr.push(randomUpper());
+charArr.push(randomNumber());
+charArr.push(randomSymbol());
 
 
 console.log(charArr);

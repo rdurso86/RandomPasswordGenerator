@@ -4,7 +4,7 @@ let generateBtn = document.querySelector("#generate");
 let userChoice = null;
 
 
-function askUserPasswordLenght() {
+function askUserPasswordLength() {
 
  userChoice = parseInt(prompt("How many characters would you like your random password to be? Please enter a number between 8 and 128."));
   
@@ -12,40 +12,43 @@ function askUserPasswordLenght() {
   }
   else {
     alert("Hey! Follow the directions dummy!")
-    askUserPasswordLenght();
+    askUserPasswordLength();
   }  
 }
 
-askUserPasswordLenght();
+askUserPasswordLength();
   
 let numberChoice = (confirm("Would you like your password to include numbers?"));
 let lowerCaseChoice = (confirm("Would you like your password to include lower case letters?"));
 let upperCaseChoice = (confirm("Would you like you password to include upper case letters?"));
 let symbolsChoice = (confirm("Would you like your password to include special characters?"));
 
+
+
 function randomNumber(){
   let numbers = "0123456789";
   if (numberChoice === true) {
-  return numbers[Math.floor(Math.random() * numbers.length)];
+  return numbers;
 }}
 
 function randomLower(){
   let lowerCase = "abcdefghijklmnopqrstuvwxyz";
   if (lowerCaseChoice === true) {
-  return lowerCase[Math.floor(Math.random() * lowerCase.length)];
+  return lowerCase;
 }}
 
 function randomUpper(){
   let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   if (upperCaseChoice === true) {
-  return upperCase[Math.floor(Math.random() * upperCase.length)];
+  return upperCase;
 }}
 
 function randomSymbol(){
   let symbols = "~!@#$%^&*()_+=?";
   if (symbolsChoice === true) {
-  return symbols[Math.floor(Math.random() * symbols.length)];
+  return symbols;
 }}
+
 
 console.log(randomLower());
 console.log(randomUpper());
@@ -54,7 +57,6 @@ console.log(randomSymbol());
 
 // Write password to the #password input
  
-//charArr = [randomLower, randomUpper, randomNumber, randomSymbol];
 charArr = [];
 
 charArr.push(randomLower());
@@ -64,19 +66,16 @@ charArr.push(randomSymbol());
 
 
 console.log(charArr);
-//Array.from(randomLower, randomUpper, randomNumber, randomSymbol);
 
 
 function generatePassword() {
-  //need variable to store password outside of loop
-  //array to reference functions
-  //if statements push to array
   //to master to run for loop over just array
-  for (let i = 1; i <= userChoice; i++) {
-    charArr * userChoice[i];
+  //for (let i = 1; i < userChoice; i++){
+    //charArr += userChoice;
+    let newArr = charArr[Math.floor(Math.random() * charArr.length)];
+    for (let i = 1; i < userChoice; i++);
+    return newArr;
   }
-}
-
 
 console.log(generatePassword());
 

@@ -107,3 +107,21 @@ function copyToClipboard() {
 generateBtn.addEventListener("click", writePassword);
 
 // BONUS EVENT LISTENER
+
+
+function generatePassword() {
+  //let newArr = charArr[Math.floor(Math.random() * userChoice)];
+  //to master to run for loop over just array
+  //for (let i = 1; i < userChoice; i++){
+  //charArr += userChoice;
+  //let newArr = charArr[Math.floor(Math.random() * charArr.length)];
+  for (let i = 1; i < userChoice; i++) {
+    charArr += userChoice;
+    //charArr = [Math.floor(Math.random() * charArr.length)];
+  }
+
+  return charArr;
+  //for (let i = 1; i < userChoice; i++){
+  //charArr += userChoice;
+  //return charArr[Math.floor(Math.random() * userChoice)];
+}
